@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuário Cadastrado</title>
+    <link rel="stylesheet" href="css/styleUsuarioCadastrado.css">
+</head>
+<body>
+    <main>
+        <h1>Usuário Cadastrado</h1>
+        <div id="usuarioInfo"></div>
+       <a href="index.html"><button> Voltar ao menu</button> </a> 
+    </main>
+    <script>
+        const usuarioInfo = document.getElementById('usuarioInfo');
+        const usuario = JSON.parse(localStorage.getItem('usuarioCadastrado'));
+
+        if (usuario) {
+            usuarioInfo.innerHTML = `
+                <p>ID: ${usuario.id}</p>
+                <p>Nome: ${usuario.nome} ${usuario.sobrenome}</p>
+                <p>Username: ${usuario.username}</p>
+                <p>Email: ${usuario.email}</p>
+                <p>Telefone: ${usuario.phone}</p>
+                <p>Cidade: ${usuario.cidade}</p>
+                <p>Rua: ${usuario.rua}, Número: ${usuario.numero}</p>
+            `;
+            // Limpar o localStorage após exibir
+            localStorage.removeItem('usuarioCadastrado');
+        } 
+    </script>
+</body>
+</html>

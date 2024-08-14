@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+    <link rel="stylesheet" href="css/styleIndex.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Usuários</h1>
+    </header>
+    <main>
+        <section class="Formulario">
+            <div class="button-group">
+                <button id="Btn_TodosUsuarios">Buscar todos os usuários</button>
+                <button id="Btn_UsuarioAleatorio">Usuário aleatório</button>
+                <a href="formPOST.html"><button id="Btn_AdicionarUsuarios">Adicionar Usuário</button></a>
+                <a href="formUpdate.html"><button id="Btn_AlterarUsuario">Alterar Usuário</button></a>
+            </div>
+            <div class="Form_Grupos">
+                <input type="number" id="IdInput" placeholder="Digite o ID do usuário">
+                <button id="Btn_IdUsuarios">Buscar usuário por ID</button>
+            </div>
+            <div class="Form_Grupos">
+                <input type="number" id="LimiteInput" placeholder="Digite o limite de usuários">
+                <button id="Btn_LimiteUsuarios">Buscar usuários com limite</button>
+            </div>
+            <div class="Form_Grupos">
+                <input type="number" id="DeleteInput" placeholder="Digite o ID do usuário para deletar">
+                <button id="Btn_DeleteUsuarios">Deletar usuário</button>
+            </div>
+        </section>
+        <section class="container"></section>
+    </main>
+    <script src="js/scriptGET.js"></script>
+    <script src="js/scriptDELETE.js"></script>
+</body>
+</html>
